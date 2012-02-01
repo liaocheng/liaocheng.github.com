@@ -19,7 +19,7 @@
       <editor clazz="param.vars::RandomGlobeVarEditor" varName="globe" innerRadius="0" outerRadius="20" center="0,0,0"/>
       <editor clazz="param.vars::RandomNumberVarEditor" varName="duringtime" min="1" max="5"/>
       <exception comment="this if for time action">
-        <editor clazz="param::TimeSelection" startTime="0" duringTime="-1"/>
+        <editor clazz="param::TimeSelection" startTime="0" duringTime="4"/>
       </exception>
     </vars>
     <action>
@@ -30,7 +30,7 @@
       </global>
       <local>
         <editor clazz="action.local::VelocityLocalEditor" varName="VelocityLocal">
-          <editor clazz="VelocityLocalEditor.as$582::VelocityParam" velocity="1,2,3"/>
+          <editor clazz="VelocityLocalEditor.as$586::VelocityParam" velocity="1,2,3"/>
         </editor>
       </local>
     </action>
