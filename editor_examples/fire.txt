@@ -1,0 +1,38 @@
+<root>
+  <effect>
+    <generater>
+      <shape>
+        <editor clazz="generater.shape::SphereEditor" varName="" radius="10" segmentsW="6" segmentsH="6"/>
+      </shape>
+      <material>
+        <editor clazz="generater.material::ColorMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="2" colorRGB="16724736" colorAlpha="0.59"/>
+      </material>
+      <sample>
+        <editor clazz="SamplePane.as$549::SampleEdior" varName="" material="0" shape="0"/>
+      </sample>
+      <output>
+        <editor clazz="generater.generate::SingleGeneraterEditor" sample="0" count="500"/>
+      </output>
+    </generater>
+    <vars>
+      <editor clazz="param.vars::RandomNumberVarEditor" varName="time" min="1" max="5"/>
+      <editor clazz="param.vars::RandomGlobeVarEditor" varName="globe" innerRadius="0" outerRadius="20" center="0,0,0"/>
+      <editor clazz="param.vars::RandomNumberVarEditor" varName="duringtime" min="1" max="5"/>
+      <exception comment="this if for time action">
+        <editor clazz="param::TimeSelection" startTime="0" duringTime="-1"/>
+      </exception>
+    </vars>
+    <action>
+      <global>
+        <editor clazz="action.global::ScaleByLifeGlobalEditor" varName="ScaleByLifeGlobal" start="2.5" end="0.1"/>
+        <editor clazz="action.global::VelocityGlobalEditor" varName="VelocityGlobal" velocity="0,80,0"/>
+        <editor clazz="action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="1,1,1,1,0,0,0,0" end="0.67,0,0,0.03,0,0,0,0"/>
+      </global>
+      <local>
+        <editor clazz="action.local::VelocityLocalEditor" varName="VelocityLocal">
+          <editor clazz="VelocityLocalEditor.as$582::VelocityParam" velocity="1,2,3"/>
+        </editor>
+      </local>
+    </action>
+  </effect>
+</root>
