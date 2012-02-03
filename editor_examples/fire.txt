@@ -1,5 +1,6 @@
 <root>
   <effect>
+    <system position="0,0,0" eulers="0,0,0" loop="1" during="1"/>
     <generater>
       <shape>
         <editor clazz="generater.shape::SphereEditor" varName="" radius="10" segmentsW="6" segmentsH="6"/>
