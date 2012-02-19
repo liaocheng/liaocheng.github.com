@@ -3,34 +3,34 @@
     <system position="0,0,0" eulers="0,0,0" loop="0" during="1"/>
     <generater>
       <shape>
-        <editor clazz="generater.shape::CubeEditor" varName="" width="20" height="2" depth="2"/>
+        <editor clazz="particleEditor.effect.generater.shape::CubeEditor" varName="" width="20" height="2" depth="2"/>
       </shape>
       <material>
-        <editor clazz="generater.material::ColorMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="0" colorRGB="16776960" colorAlpha="0.2"/>
+        <editor clazz="particleEditor.effect.generater.material::ColorMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="0" color="20ffff00"/>
       </material>
       <sample>
-        <editor clazz="SamplePane.as$579::SampleEdior" varName="" material="0" shape="0"/>
+        <editor clazz="particleEditor.effect.SamplePane.as$579::SampleEdior" varName="" material="0" shape="0"/>
       </sample>
       <output>
-        <editor clazz="generater.generate::SingleGeneraterEditor" sample="0" count="500"/>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="500"/>
       </output>
     </generater>
     <vars>
-      <editor clazz="param.vars::ConstNumberVarEditor" varName="start" number="1"/>
-      <editor clazz="param.vars::ConstNumberVarEditor" varName="during" number="1"/>
-      <editor clazz="param.vars::RandomGlobeVarEditor" varName="velocity" innerRadius="200" outerRadius="200" center="0,0,0"/>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="start" number="1"/>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="during" number="1"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomGlobeVarEditor" varName="velocity" innerRadius="200" outerRadius="200" center="0,0,0"/>
       <exception comment="this if for time action">
-        <editor clazz="param::TimeSelection" startTime="0" duringTime="1"/>
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="0" duringTime="1"/>
       </exception>
     </vars>
     <action>
       <global>
-        <editor clazz="action.global::AutoRotateGlobalEditor" varName="AutoRotateGlobal"/>
-        <editor clazz="action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="1,1,1,1,0,0,0,0" end="1,1,1,0,0,0,0,0"/>
+        <editor clazz="particleEditor.effect.action.global::AutoRotateGlobalEditor" varName="AutoRotateGlobal"/>
+        <editor clazz="particleEditor.effect.action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="1,1,1,1,0,0,0,0" end="1,1,1,0,0,0,0,0"/>
       </global>
       <local>
-        <editor clazz="action.local::VelocityLocalEditor" varName="VelocityLocal">
-          <editor clazz="VelocityLocalEditor.as$617::VelocityParam" velocity="2,3,4"/>
+        <editor clazz="particleEditor.effect.action.local::VelocityLocalEditor" varName="VelocityLocal">
+          <editor clazz="particleEditor.effect.VelocityLocalEditor.as$617::VelocityParam" velocity="2,3,4"/>
         </editor>
       </local>
     </action>
@@ -39,10 +39,10 @@
     <system position="0,0,0" eulers="0,0,0" loop="0" during="1"/>
     <generater>
       <shape>
-        <editor clazz="generater.shape::PlaneEditor" varName="" width="20" height="20"/>
+        <editor clazz="particleEditor.effect.generater.shape::PlaneEditor" varName="" width="20" height="20"/>
       </shape>
       <material>
-        <editor clazz="generater.material::BitmapMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="2" smooth="1" minmap="1" repeat="0" alphaThreshold="0">
+        <editor clazz="particleEditor.effect.generater.material::BitmapMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="2" smooth="1" minmap="1" repeat="0" alphaThreshold="0">
           <bitmap>iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAABs0lEQVRIicWVa2/aQBBFz9hL7QCB
 /v//mKjBgIONmX7InTBYKE36UC1dyYL13LPz2IX//NhnF7r7AvgGFKnW9wa4NAFnaTCz8bcB3L0C
 HqQWaKRFAqgSwCUBjMBJegV6oDezyy8B3L0Aa2AFLKUAaZSFgJgDhPkg8146SgegM7Mp/MrMfAU8
@@ -55,24 +55,24 @@ hrXMGz6+DWMCzvcun/nzE2g1/X67zWAmAAAAAElFTkSuQmCC</bitmap>
         </editor>
       </material>
       <sample>
-        <editor clazz="SamplePane.as$579::SampleEdior" varName="" material="0" shape="0"/>
+        <editor clazz="particleEditor.effect.SamplePane.as$579::SampleEdior" varName="" material="0" shape="0"/>
       </sample>
       <output>
-        <editor clazz="generater.generate::SingleGeneraterEditor" sample="0" count="1"/>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="1"/>
       </output>
     </generater>
     <vars>
-      <editor clazz="param.vars::ConstNumberVarEditor" varName="during" number="1"/>
-      <editor clazz="param.vars::ConstNumberVarEditor" varName="start" number="0"/>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="during" number="1"/>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="start" number="0"/>
       <exception comment="this if for time action">
-        <editor clazz="param::TimeSelection" startTime="1" duringTime="0"/>
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="1" duringTime="0"/>
       </exception>
     </vars>
     <action>
       <global>
-        <editor clazz="action.global::BillboardEditor" varName="BillboardGlobal"/>
-        <editor clazz="action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="1,0,0,1,0,0,0,0" end="1,1,0,1,0,0,0,0"/>
-        <editor clazz="action.global::ScaleByLifeGlobalEditor" varName="ScaleByLifeGlobal" start="1" end="4"/>
+        <editor clazz="particleEditor.effect.action.global::BillboardEditor" varName="BillboardGlobal"/>
+        <editor clazz="particleEditor.effect.action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="1,0,0,1,0,0,0,0" end="1,1,0,1,0,0,0,0"/>
+        <editor clazz="particleEditor.effect.action.global::ScaleByLifeGlobalEditor" varName="ScaleByLifeGlobal" start="1" end="4"/>
       </global>
       <local/>
     </action>
@@ -81,10 +81,10 @@ hrXMGz6+DWMCzvcun/nzE2g1/X67zWAmAAAAAElFTkSuQmCC</bitmap>
     <system position="0,0,0" eulers="0,0,0" loop="0" during="1"/>
     <generater>
       <shape>
-        <editor clazz="generater.shape::PlaneEditor" varName="" width="10" height="10"/>
+        <editor clazz="particleEditor.effect.generater.shape::PlaneEditor" varName="" width="10" height="10"/>
       </shape>
       <material>
-        <editor clazz="generater.material::BitmapMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="2" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
+        <editor clazz="particleEditor.effect.generater.material::BitmapMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="2" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
           <bitmap>iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAABs0lEQVRIicWVa2/aQBBFz9hL7QCB
 /v//mKjBgIONmX7InTBYKE36UC1dyYL13LPz2IX//NhnF7r7AvgGFKnW9wa4NAFnaTCz8bcB3L0C
 HqQWaKRFAqgSwCUBjMBJegV6oDezyy8B3L0Aa2AFLKUAaZSFgJgDhPkg8146SgegM7Mp/MrMfAU8
@@ -97,29 +97,29 @@ hrXMGz6+DWMCzvcun/nzE2g1/X67zWAmAAAAAElFTkSuQmCC</bitmap>
         </editor>
       </material>
       <sample>
-        <editor clazz="SamplePane.as$579::SampleEdior" varName="" material="0" shape="0"/>
+        <editor clazz="particleEditor.effect.SamplePane.as$579::SampleEdior" varName="" material="0" shape="0"/>
       </sample>
       <output>
-        <editor clazz="generater.generate::SingleGeneraterEditor" sample="0" count="30"/>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="30"/>
       </output>
     </generater>
     <vars>
-      <editor clazz="param.vars::ConstNumberVarEditor" varName="start" number="1"/>
-      <editor clazz="param.vars::ConstNumberVarEditor" varName="during" number="1.5"/>
-      <editor clazz="param.vars::RandomGlobeVarEditor" varName="velocity" innerRadius="60" outerRadius="60" center="0,0,0"/>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="start" number="1"/>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="during" number="1.5"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomGlobeVarEditor" varName="velocity" innerRadius="60" outerRadius="60" center="0,0,0"/>
       <exception comment="this if for time action">
-        <editor clazz="param::TimeSelection" startTime="0" duringTime="1"/>
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="0" duringTime="1"/>
       </exception>
     </vars>
     <action>
       <global>
-        <editor clazz="action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="0.8,0.8,0,1,0,0,0,0" end="0,1,0,0,0,0,0,0"/>
-        <editor clazz="action.global::ScaleByLifeGlobalEditor" varName="ScaleByLifeGlobal" start="1" end="3"/>
-        <editor clazz="action.global::BillboardEditor" varName="BillboardGlobal"/>
+        <editor clazz="particleEditor.effect.action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="0.8,0.8,0,1,0,0,0,0" end="0,1,0,0,0,0,0,0"/>
+        <editor clazz="particleEditor.effect.action.global::ScaleByLifeGlobalEditor" varName="ScaleByLifeGlobal" start="1" end="3"/>
+        <editor clazz="particleEditor.effect.action.global::BillboardEditor" varName="BillboardGlobal"/>
       </global>
       <local>
-        <editor clazz="action.local::VelocityLocalEditor" varName="VelocityLocal">
-          <editor clazz="VelocityLocalEditor.as$617::VelocityParam" velocity="2,3,4"/>
+        <editor clazz="particleEditor.effect.action.local::VelocityLocalEditor" varName="VelocityLocal">
+          <editor clazz="particleEditor.effect.VelocityLocalEditor.as$617::VelocityParam" velocity="2,3,4"/>
         </editor>
       </local>
     </action>

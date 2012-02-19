@@ -3,10 +3,10 @@
     <system position="0,0,0" eulers="0,0,0" loop="1" during="1"/>
     <generater>
       <shape>
-        <editor clazz="generater.shape::PlaneEditor" varName="plane" width="20" height="20"/>
+        <editor clazz="particleEditor.effect.generater.shape::PlaneEditor" varName="plane" width="20" height="20"/>
       </shape>
       <material>
-        <editor clazz="generater.material::BitmapMaterialEditor" varName="png1" bothSides="0" requiresBlending="1" blendMode="0" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
+        <editor clazz="particleEditor.effect.generater.material::BitmapMaterialEditor" varName="png1" bothSides="0" requiresBlending="1" blendMode="0" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
           <bitmap>iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAgAElEQVR4nOy9d5hd1XX3/znn3HN7
 n5k7fUbTpJFmRkJdQpIpohdhG5dg7NiOYycueWyaC7gI12CwgLxx/NqJsZ2QgO2ADcZ0ECBAIKE2
 mlEbTe/3zu29nf3+sce/4FixJVkO5BfW88wjge69s+/ea++91vf7XevAW/aWvWVv2Vv2lr1l/xtN
@@ -398,7 +398,7 @@ QzIBdAsFJisF/34Kp519NFV7B8m0DNMxa6OtoIRnbE4G91xz8ClzH4xxSCaA2UzE4WL2wW5eMX6D
 JZvF6gniSpsYGfiGdkBh0//ocUjWAAD1N6uieJyTUjFKdA2zxcG4zc6DrZft3zz//3ocsgkAMoXL
 KXpYTCbGcnj9D+KD+CA+iA/ig/ggPogP4h3i/wP+m5mSxgQnGQAAAABJRU5ErkJggg==</bitmap>
         </editor>
-        <editor clazz="generater.material::BitmapMaterialEditor" varName="png2" bothSides="0" requiresBlending="1" blendMode="0" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
+        <editor clazz="particleEditor.effect.generater.material::BitmapMaterialEditor" varName="png2" bothSides="0" requiresBlending="1" blendMode="0" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
           <bitmap>iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAREtJREFU
 eF7tXQVYlef7Bk5S9uwgBAsVFWPm3MwZM2a72c5NjFmANVvUmbN1G3Y3KBh0S3dId3eD53/fR92Y
@@ -709,7 +709,7 @@ oPaues9Nm+8gF1AIWhiVSSnwRDWu/zwT6C37tFp9jVsCtXc1hhw8ZOeWkWntVVLKjCel2KrVg9Q0
 9u17QC4+Ce1drZGHDg9fYGlVp6+JibB2s2Zvf8Wab1a7HhCqNWyo3m3OnLr9jIxqda4x/9VuAN9F
 gym8LFQDIeS/zgJ+F51Zc42aHqjpgZoeqOmBmh6o6YH33gP/B0pUx/Re1mMxAAAAAElFTkSuQmCC</bitmap>
         </editor>
-        <editor clazz="generater.material::BitmapMaterialEditor" varName="png3" bothSides="0" requiresBlending="1" blendMode="0" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
+        <editor clazz="particleEditor.effect.generater.material::BitmapMaterialEditor" varName="png3" bothSides="0" requiresBlending="1" blendMode="0" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
           <bitmap>iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAgAElEQVR4nO29d5gd13nm+auqm2Pn
 bnSjG2gkAgQYxACQokiKoiQqWJJHlkcex7Ul27KsGQfZM8qiqGDNytbujh+vbO/YWnvGnnUaWVa0
 LYqZFKMYQJBIjdi5++Z8b1XtH+8p3AYEgACJwGcX3/NcdKP79q2qc77znS+873fgklySS3JJLskl
@@ -1020,12 +1020,12 @@ gg==</bitmap>
         </editor>
       </material>
       <sample>
-        <editor clazz="SamplePane.as$579::SampleEdior" varName="sample1" material="0" shape="0"/>
-        <editor clazz="SamplePane.as$579::SampleEdior" varName="sample2" material="1" shape="0"/>
-        <editor clazz="SamplePane.as$579::SampleEdior" varName="sample3" material="2" shape="0"/>
+        <editor clazz="particleEditor.effect.SamplePane.as$579::SampleEdior" varName="sample1" material="0" shape="0"/>
+        <editor clazz="particleEditor.effect.SamplePane.as$579::SampleEdior" varName="sample2" material="1" shape="0"/>
+        <editor clazz="particleEditor.effect.SamplePane.as$579::SampleEdior" varName="sample3" material="2" shape="0"/>
       </sample>
       <output>
-        <editor clazz="generater.generate::WeightGeneraterEditor" count="500">
+        <editor clazz="particleEditor.effect.generater.subGenerate::WeightGeneraterEditor" count="500">
           <weight_sample sample="0" weight="1"/>
           <weight_sample sample="1" weight="1"/>
           <weight_sample sample="2" weight="1"/>
@@ -1033,27 +1033,27 @@ gg==</bitmap>
       </output>
     </generater>
     <vars>
-      <editor clazz="param.vars::RandomNumberVarEditor" varName="start time" min="0" max="20"/>
-      <editor clazz="param.vars::RandomNumberVarEditor" varName="during time" min="18" max="20"/>
-      <editor clazz="param.vars::RandomCircleVarEditor" varName="circle" innerRadius="0" outerRadius="1000" x="0" y="0"/>
-      <editor clazz="param.vars::ConstNumberVarEditor" varName="y" number="500"/>
-      <editor clazz="param.vars::RandomCircleVarEditor" varName="drift" innerRadius="10" outerRadius="30" x="0" y="0"/>
-      <editor clazz="param.vars::RandomNumberVarEditor" varName="drift cycle" min="2" max="6"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomNumberVarEditor" varName="start time" min="0" max="20"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomNumberVarEditor" varName="during time" min="18" max="20"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomCircleVarEditor" varName="circle" innerRadius="0" outerRadius="1000" x="0" y="0"/>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="y" number="500"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomCircleVarEditor" varName="drift" innerRadius="10" outerRadius="30" x="0" y="0"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomNumberVarEditor" varName="drift cycle" min="2" max="6"/>
       <exception comment="this if for time action">
-        <editor clazz="param::TimeSelection" startTime="0" duringTime="1"/>
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="0" duringTime="1"/>
       </exception>
     </vars>
     <action>
       <global>
-        <editor clazz="action.global::VelocityGlobalEditor" varName="VelocityGlobal" velocity="0,-100,0"/>
-        <editor clazz="action.global::BillboardEditor" varName="BillboardGlobal"/>
+        <editor clazz="particleEditor.effect.action.global::VelocityGlobalEditor" varName="VelocityGlobal" velocity="0,-100,0"/>
+        <editor clazz="particleEditor.effect.action.global::BillboardEditor" varName="BillboardGlobal"/>
       </global>
       <local>
-        <editor clazz="action.local::OffestActionEditor" varName="OffestPositionLocal">
-          <editor clazz="OffestActionEditor.as$615::OffestParam" offest="2,4,3"/>
+        <editor clazz="particleEditor.effect.action.local::OffestActionEditor" varName="OffestPositionLocal">
+          <editor clazz="particleEditor.effect.OffestActionEditor.as$615::OffestParam" offest="2,4,3"/>
         </editor>
-        <editor clazz="action.local::DriftLocalEditor" varName="DriftLocal">
-          <editor clazz="DriftLocalEditor.as$618::DriftParam" offest="5,-1,6" cycle="7"/>
+        <editor clazz="particleEditor.effect.action.local::DriftLocalEditor" varName="DriftLocal">
+          <editor clazz="particleEditor.effect.DriftLocalEditor.as$618::DriftParam" offest="5,-1,6" cycle="7"/>
         </editor>
       </local>
     </action>
