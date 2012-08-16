@@ -1,0 +1,95 @@
+<root>
+  <effect>
+    <system position="0,0,0" eulers="0,0,0" loop="1" during="1" scale="1,1,1"/>
+    <generater>
+      <shape>
+        <editor clazz="particleEditor.effect.generater.shape::CubeEditor" varName="cube" width="300" height="10" depth="10"/>
+      </shape>
+      <material>
+        <editor clazz="particleEditor.effect.generater.material::ColorMaterialEditor" varName="material" bothSides="0" requiresBlending="1" blendMode="0" multipleRendering="1" renderTimes="50" timeInterval="0.012" fadeFactor="0.9" color="ffff0000"/>
+      </material>
+      <sample>
+        <editor clazz="SamplesFactory.as$553::SampleEdior" varName="sample" material="0" shape="0"/>
+      </sample>
+      <output>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="1"/>
+      </output>
+    </generater>
+    <vars>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="cycle" number="2"/>
+      <exception comment="this if for time action">
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="-1" duringTime="-1"/>
+      </exception>
+    </vars>
+    <action>
+      <global/>
+      <local>
+        <editor clazz="particleEditor.effect.action.local::RotateLocalEditor" varName="RandomRotateLocal">
+          <editor clazz="RotateLocalEditor.as$632::RotateParam" axis="-1,-1,-1" cycle="0"/>
+        </editor>
+      </local>
+    </action>
+  </effect>
+  <effect>
+    <system position="0,0,0" eulers="0,0,60" loop="1" during="1" scale="1,1,1"/>
+    <generater>
+      <shape>
+        <editor clazz="particleEditor.effect.generater.shape::CubeEditor" varName="cube" width="300" height="10" depth="10"/>
+      </shape>
+      <material>
+        <editor clazz="particleEditor.effect.generater.material::ColorMaterialEditor" varName="material" bothSides="0" requiresBlending="1" blendMode="0" multipleRendering="1" renderTimes="50" timeInterval="0.012" fadeFactor="0.9" color="ff00ff00"/>
+      </material>
+      <sample>
+        <editor clazz="SamplesFactory.as$553::SampleEdior" varName="sample" material="0" shape="0"/>
+      </sample>
+      <output>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="1"/>
+      </output>
+    </generater>
+    <vars>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="cycle" number="2"/>
+      <exception comment="this if for time action">
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="-1" duringTime="-1"/>
+      </exception>
+    </vars>
+    <action>
+      <global/>
+      <local>
+        <editor clazz="particleEditor.effect.action.local::RotateLocalEditor" varName="RandomRotateLocal">
+          <editor clazz="RotateLocalEditor.as$632::RotateParam" axis="-1,-1,-1" cycle="0"/>
+        </editor>
+      </local>
+    </action>
+  </effect>
+  <effect>
+    <system position="0,0,0" eulers="0,0,120" loop="1" during="1" scale="1,1,1"/>
+    <generater>
+      <shape>
+        <editor clazz="particleEditor.effect.generater.shape::CubeEditor" varName="cube" width="300" height="10" depth="10"/>
+      </shape>
+      <material>
+        <editor clazz="particleEditor.effect.generater.material::ColorMaterialEditor" varName="material" bothSides="0" requiresBlending="1" blendMode="0" multipleRendering="1" renderTimes="50" timeInterval="0.012" fadeFactor="0.9" color="ffffff00"/>
+      </material>
+      <sample>
+        <editor clazz="SamplesFactory.as$553::SampleEdior" varName="sample" material="0" shape="0"/>
+      </sample>
+      <output>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="1"/>
+      </output>
+    </generater>
+    <vars>
+      <editor clazz="particleEditor.effect.param.vars::ConstNumberVarEditor" varName="cycle" number="2"/>
+      <exception comment="this if for time action">
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="-1" duringTime="-1"/>
+      </exception>
+    </vars>
+    <action>
+      <global/>
+      <local>
+        <editor clazz="particleEditor.effect.action.local::RotateLocalEditor" varName="RandomRotateLocal">
+          <editor clazz="RotateLocalEditor.as$632::RotateParam" axis="-1,-1,-1" cycle="0"/>
+        </editor>
+      </local>
+    </action>
+  </effect>
+</root>

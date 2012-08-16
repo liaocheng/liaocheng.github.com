@@ -1,0 +1,85 @@
+<root>
+  <effect>
+    <system position="0,0,0" eulers="0,0,0" loop="1" during="1" scale="1,1,1"/>
+    <generater>
+      <shape>
+        <editor clazz="particleEditor.effect.generater.shape::PlaneEditor" varName="plane" width="20" height="20"/>
+      </shape>
+      <material>
+        <editor clazz="particleEditor.effect.generater.material::BitmapMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="2" multipleRendering="0" renderTimes="1" timeInterval="0.1" fadeFactor="0.5" smooth="1" minmap="0" repeat="0" alphaThreshold="0">
+          <bitmap>iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAAxUlEQVQokaXRy06CUQwE4K/yR4N4
+JZpAvL7/OxllYSABjKJCMP7WTUlg4cqTdHE6nXam5Z8vtj+ZuYc+TnGEA3TQYo0PvGEeEbnTIDMH
+GGKAC5zhEA2+scQrZphgHBGTpshD3OKm4qoa9UvFGi9FfEYP+5kZTWZ20K3kSU2+xDXucYcRnsrK
+Z9noodtERJuZqwIWJXNa3pd42FIwLXxR9bMGImKcmS2+NkBN/WsHIzxGxGrnCrWPY5xXbF/hvcjz
+iPjZ1P8CsX1OQjjdeLoAAAAASUVORK5CYII=</bitmap>
+        </editor>
+      </material>
+      <sample>
+        <editor clazz="SamplesFactory.as$553::SampleEdior" varName="" material="0" shape="0"/>
+      </sample>
+      <output>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="300"/>
+      </output>
+    </generater>
+    <vars>
+      <editor clazz="particleEditor.effect.param.vars::RandomNumberVarEditor" varName="startTime" min="0" max="6"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomNumberVarEditor" varName="duringTime" min="5" max="6"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomCircleVarEditor" varName="circle" innerRadius="0" outerRadius="150" x="0" y="0"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomNumberVarEditor" varName="driftCycle" min="1" max="2"/>
+      <editor clazz="particleEditor.effect.param.vars::RandomCircleVarEditor" varName="driftCircle" innerRadius="0" outerRadius="20" x="0" y="0"/>
+      <exception comment="this if for time action">
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="0" duringTime="1"/>
+      </exception>
+    </vars>
+    <action>
+      <global>
+        <editor clazz="particleEditor.effect.action.global::BillboardEditor" varName="BillboardGlobal"/>
+        <editor clazz="particleEditor.effect.action.global::VelocityGlobalEditor" varName="VelocityGlobal" velocity="0,80,0"/>
+        <editor clazz="particleEditor.effect.action.global::ChangeColorByLifeGlobalEditor" varName="ChangeColorByLifeGlobal" start="0.4,1,0.4,0.5,0,0,0,0" end="0.4,1,0.4,0.1,0,0,0,0"/>
+      </global>
+      <local>
+        <editor clazz="particleEditor.effect.action.local::OffsetActionEditor" varName="OffsetPositionLocal">
+          <editor clazz="OffsetActionEditor.as$635::OffsetParam" offset="2,-1,3"/>
+        </editor>
+        <editor clazz="particleEditor.effect.action.local::DriftLocalEditor" varName="DriftLocal">
+          <editor clazz="DriftLocalEditor.as$631::DriftParam" offset="5,-1,6" cycle="4"/>
+        </editor>
+      </local>
+    </action>
+  </effect>
+  <effect>
+    <system position="0,0,0" eulers="90,0,0" loop="1" during="1" scale="1,1,1"/>
+    <generater>
+      <shape>
+        <editor clazz="particleEditor.effect.generater.shape::PlaneEditor" varName="" width="500" height="500"/>
+      </shape>
+      <material>
+        <editor clazz="particleEditor.effect.generater.material::BitmapMaterialEditor" varName="" bothSides="0" requiresBlending="1" blendMode="2" multipleRendering="0" renderTimes="1" timeInterval="0.1" fadeFactor="0.5" smooth="1" minmap="1" repeat="0" alphaThreshold="0">
+          <bitmap>iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAAxUlEQVQokaXRy06CUQwE4K/yR4N4
+JZpAvL7/OxllYSABjKJCMP7WTUlg4cqTdHE6nXam5Z8vtj+ZuYc+TnGEA3TQYo0PvGEeEbnTIDMH
+GGKAC5zhEA2+scQrZphgHBGTpshD3OKm4qoa9UvFGi9FfEYP+5kZTWZ20K3kSU2+xDXucYcRnsrK
+Z9noodtERJuZqwIWJXNa3pd42FIwLXxR9bMGImKcmS2+NkBN/WsHIzxGxGrnCrWPY5xXbF/hvcjz
+iPjZ1P8CsX1OQjjdeLoAAAAASUVORK5CYII=</bitmap>
+        </editor>
+      </material>
+      <sample>
+        <editor clazz="SamplesFactory.as$553::SampleEdior" varName="" material="0" shape="0"/>
+      </sample>
+      <output>
+        <editor clazz="particleEditor.effect.generater.subGenerate::SingleGeneraterEditor" sample="0" count="1"/>
+      </output>
+    </generater>
+    <vars>
+      <exception comment="this if for time action">
+        <editor clazz="particleEditor.effect.param::TimeSelection" startTime="-1" duringTime="-1"/>
+      </exception>
+    </vars>
+    <action>
+      <global>
+        <editor clazz="particleEditor.effect.action.global::ScaleByTimeGlobalEditor" varName="ScaleByTimeGlobal" min="0.8" max="1.2" cycle="3"/>
+        <editor clazz="particleEditor.effect.action.global::FlickerGlobalEditor" varName="FlickerGlobal" min="0.4,1,0.4,1,0,0,0,0" max="0.4,1,0.4,0.5,0,0,0,0" cycle="3" phase="0"/>
+      </global>
+      <local/>
+    </action>
+  </effect>
+</root>
